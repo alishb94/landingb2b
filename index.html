@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enterprise Hosting for B2B Teams | HostNexus</title>
+    <meta
+      name="description"
+      content="Generate more qualified B2B leads with secure enterprise hosting, SLA-backed uptime, and dedicated migration support."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="top-nav">
+        <span class="brand">HostNexus Enterprise</span>
+        <a href="#contact" class="nav-cta">Book a Demo</a>
+      </nav>
+
+      <div class="hero-content">
+        <p class="eyebrow">Enterprise Hosting for B2B Growth</p>
+        <h1>Turn hosting into a revenue engine for your sales team</h1>
+        <p class="hero-copy">
+          Launch faster, stay compliant, and keep every key account online with
+          globally distributed enterprise infrastructure and white-glove support.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="button primary">Get Pricing</a>
+          <a href="#proof" class="button secondary">See Success Metrics</a>
+        </div>
+        <ul class="proof-points">
+          <li>99.99% uptime SLA</li>
+          <li>SOC 2 + ISO-ready architecture</li>
+          <li>24/7 senior engineer support</li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="proof">
+        <h2>Built for teams selling to enterprise buyers</h2>
+        <div class="grid three-up">
+          <article class="card">
+            <h3>Accelerate deal cycles</h3>
+            <p>
+              Provision production-grade environments in minutes so prospects can
+              move from proof-of-concept to procurement without delays.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Reduce procurement friction</h3>
+            <p>
+              Security-first infrastructure with audit trails and compliance docs
+              that enterprise IT teams can approve quickly.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Protect expansion revenue</h3>
+            <p>
+              Built-in redundancy and advanced monitoring keep key accounts
+              stable while your customer success team drives upsells.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section highlight">
+        <h2>Trusted outcomes for B2B leaders</h2>
+        <div class="grid stats">
+          <div class="stat">
+            <p class="value">38%</p>
+            <p class="label">faster enterprise onboarding</p>
+          </div>
+          <div class="stat">
+            <p class="value">52%</p>
+            <p class="label">fewer infrastructure-related escalations</p>
+          </div>
+          <div class="stat">
+            <p class="value">4.9/5</p>
+            <p class="label">support satisfaction from technical teams</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <h2>Start generating better enterprise leads</h2>
+        <p class="contact-copy">
+          Share your infrastructure goals and we will tailor a hosting strategy
+          for your vertical, compliance requirements, and deal size.
+        </p>
+        <form class="lead-form" id="lead-form" novalidate>
+          <label>
+            Work email
+            <input type="email" placeholder="name@company.com" required />
+          </label>
+          <label>
+            Company
+            <input type="text" placeholder="Your company" required />
+          </label>
+          <label>
+            Monthly hosting budget
+            <select required>
+              <option value="">Select range</option>
+              <option>$5,000 - $10,000</option>
+              <option>$10,000 - $25,000</option>
+              <option>$25,000+</option>
+            </select>
+          </label>
+          <button type="submit" class="button primary">Request Consultation</button>
+          <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <script>
+      const form = document.getElementById('lead-form');
+      const message = document.getElementById('form-message');
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        if (!form.checkValidity()) {
+          message.textContent = 'Please complete all required fields with valid details.';
+          message.classList.remove('success');
+          message.classList.add('error');
+          form.reportValidity();
+          return;
+        }
+
+        message.textContent = 'Thanks! Your request has been captured. Our enterprise team will contact you shortly.';
+        message.classList.remove('error');
+        message.classList.add('success');
+        form.reset();
+      });
+    </script>
+  </body>
+</html>
