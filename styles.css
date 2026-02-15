@@ -1,0 +1,83 @@
+:root {
+  --bg: #f5f7ff;
+  --card: #ffffff;
+  --text: #111827;
+  --muted: #4b5563;
+  --brand: #2563eb;
+  --brand-dark: #1d4ed8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.hero,
+.section {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.eyebrow {
+  font-weight: 700;
+  color: var(--brand-dark);
+  margin: 0 0 0.5rem;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+p {
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.button.primary {
+  background: var(--brand);
+  color: #fff;
+}
+
+.button.secondary {
+  border: 1px solid #cbd5e1;
+  color: var(--brand-dark);
+}
+
+.benefits {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.cta {
+  text-align: center;
+}
