@@ -1,14 +1,10 @@
 :root {
-  color-scheme: light;
-  --bg: #f3f6ff;
-  --surface: #ffffff;
+  --bg: #f5f7ff;
+  --card: #ffffff;
   --text: #111827;
   --muted: #4b5563;
-  --brand: #3b82f6;
+  --brand: #2563eb;
   --brand-dark: #1d4ed8;
-  --accent: #c7d2fe;
-  --radius: 14px;
-  --shadow: 0 14px 40px rgba(17, 24, 39, 0.1);
 }
 
 * {
@@ -17,214 +13,71 @@
 
 body {
   margin: 0;
-  font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
   color: var(--text);
-  background: linear-gradient(180deg, #eff4ff 0%, #f8faff 100%);
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
-.hero {
-  background: radial-gradient(circle at top right, #dbeafe, #eff4ff 55%);
-  padding: 2rem 1.25rem 4rem;
-}
-
-.top-nav,
-.hero-content,
-.section {
-  max-width: 1080px;
+.page {
+  max-width: 860px;
   margin: 0 auto;
+  padding: 1.25rem;
 }
 
-.top-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 4rem;
-}
-
-.brand {
-  font-weight: 700;
-  letter-spacing: 0.2px;
-}
-
-.nav-cta {
-  color: var(--brand-dark);
-  text-decoration: none;
-  font-weight: 600;
+.hero,
+.section {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--brand-dark);
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  color: var(--brand-dark);
+  margin: 0 0 0.5rem;
 }
 
-h1 {
-  font-size: clamp(2rem, 5vw, 3.4rem);
-  line-height: 1.1;
-  max-width: 760px;
-  margin: 0;
+h1,
+h2 {
+  margin-top: 0;
 }
 
-.hero-copy {
+p {
   color: var(--muted);
-  max-width: 680px;
-  margin: 1.25rem 0;
-  font-size: 1.08rem;
 }
 
-.hero-actions {
+.actions {
   display: flex;
-  flex-wrap: wrap;
   gap: 0.75rem;
-  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 .button {
   display: inline-block;
-  border: none;
+  padding: 0.7rem 1rem;
   border-radius: 999px;
-  padding: 0.78rem 1.3rem;
-  font-weight: 600;
   text-decoration: none;
-  cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.button:hover {
-  transform: translateY(-1px);
+  font-weight: 700;
 }
 
 .button.primary {
   background: var(--brand);
   color: #fff;
-  box-shadow: 0 10px 24px rgba(59, 130, 246, 0.28);
 }
 
 .button.secondary {
-  background: var(--surface);
+  border: 1px solid #cbd5e1;
   color: var(--brand-dark);
-  border: 1px solid #bfdbfe;
 }
 
-.proof-points {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
+.benefits {
   margin: 0;
-  gap: 1rem;
-  color: var(--muted);
-  font-size: 0.95rem;
+  padding-left: 1.2rem;
 }
 
-.section {
-  padding: 4rem 1.25rem;
-}
-
-.section h2 {
-  margin-top: 0;
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
-}
-
-.grid {
-  display: grid;
-  gap: 1rem;
-}
-
-.three-up {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-
-.card {
-  background: var(--surface);
-  border-radius: var(--radius);
-  padding: 1.25rem;
-  box-shadow: var(--shadow);
-}
-
-.card p {
-  color: var(--muted);
-}
-
-.highlight {
-  background: #e0e7ff;
-}
-
-.stats {
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  margin-top: 1rem;
-}
-
-.stat {
-  background: #fff;
-  border-radius: var(--radius);
-  padding: 1rem;
+.cta {
   text-align: center;
-}
-
-.value {
-  margin: 0;
-  color: var(--brand-dark);
-  font-size: 1.9rem;
-  font-weight: 800;
-}
-
-.label {
-  margin: 0.45rem 0 0;
-  color: var(--muted);
-}
-
-.contact-copy {
-  max-width: 720px;
-  color: var(--muted);
-}
-
-.lead-form {
-  margin-top: 1.2rem;
-  display: grid;
-  gap: 0.8rem;
-  max-width: 560px;
-}
-
-.form-message {
-  margin: 0.1rem 0 0;
-  font-size: 0.95rem;
-  min-height: 1.4rem;
-}
-
-.form-message.success {
-  color: #166534;
-}
-
-.form-message.error {
-  color: #991b1b;
-}
-
-label {
-  display: grid;
-  gap: 0.35rem;
-  font-weight: 600;
-}
-
-input,
-select {
-  border: 1px solid #d1d5db;
-  border-radius: 10px;
-  padding: 0.72rem 0.85rem;
-  font: inherit;
-}
-
-@media (max-width: 640px) {
-  .top-nav {
-    margin-bottom: 2rem;
-  }
-
-  .section,
-  .hero {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
 }
